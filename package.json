@@ -10,7 +10,7 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
-    "start:dev": "nest start --watch",
+    "start:dev": "rm -rf dist && nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
@@ -24,9 +24,12 @@
     "@nestjs/common": "^7.6.13",
     "@nestjs/core": "^7.6.13",
     "@nestjs/platform-express": "^7.6.13",
+    "mysql2": "^2.2.5",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^6.6.6"
+    "rxjs": "^6.6.6",
+    "sequelize": "^6.6.2",
+    "sequelize-typescript": "^2.1.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.5.6",
